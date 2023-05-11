@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="32dp"
+    tools:context="presentation.main.MainActivity">
+
+    <TextView
+        android:id="@+id/activity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="CurrencySwap"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_valueTextImput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:hint="Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="16dp"
+        android:background="@drawable/ic_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_valueTextImput"
+        app:layout_constraintEnd_toStartOf="@+id/activity_result"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/activity_valueTextImput"
+        app:layout_constraintTop_toTopOf="@+id/activity_valueTextImput" />
+
+    <TextView
+        android:id="@+id/activity_result"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_title"
+        tools:text="10 EUR = 15.0 USD" />
+
+
+    <TextView
+        android:id="@+id/activity_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="From"
+        app:layout_constraintStart_toStartOf="@id/spFromCurrency"
+        app:layout_constraintTop_toBottomOf="@id/activity_title" />
+
+    <Spinner
+        android:id="@+id/spFromCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/currency_codes"
+        android:padding="12dp"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_from" />
+
+    <TextView
+        android:id="@+id/activity_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="To"
+        app:layout_constraintStart_toStartOf="@id/spToCurrency"
+        app:layout_constraintTop_toBottomOf="@id/activity_title" />
+
+    <Spinner
+        android:id="@+id/spToCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:entries="@array/currency_codes"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_to" />
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spToCurrency" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
