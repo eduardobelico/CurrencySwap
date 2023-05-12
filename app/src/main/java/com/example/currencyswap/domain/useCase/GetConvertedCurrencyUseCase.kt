@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 
-class ConvertedCurrencyUseCase(private val repository: CurrencyConverterRepository) {
+class GetConvertedCurrencyUseCase(private val repository: CurrencyConverterRepository) {
 
     operator fun invoke(
         amount: String,
