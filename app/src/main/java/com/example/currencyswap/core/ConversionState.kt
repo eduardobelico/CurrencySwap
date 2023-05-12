@@ -1,6 +1,6 @@
 package com.example.currencyswap.core
 
-sealed class ConversionState<out T: Any> {
+sealed class ConversionState<T> {
 
     object Loading: ConversionState<Nothing>()
 

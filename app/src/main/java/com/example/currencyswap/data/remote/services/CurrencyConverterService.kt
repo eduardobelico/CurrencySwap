@@ -1,7 +1,7 @@
 package com.example.currencyswap.data.remote.services
 
 import com.example.currencyswap.core.Constants.API_KEY
-import com.example.currencyswap.data.remote.dtos.CurrencyDto
+import com.example.currencyswap.data.remote.models.CurrencyDto
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query

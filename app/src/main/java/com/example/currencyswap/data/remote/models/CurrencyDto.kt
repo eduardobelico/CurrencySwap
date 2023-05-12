@@ -1,4 +1,4 @@
-package com.example.currencyswap.data.remote.dtos
+package com.example.currencyswap.data.remote.models
 
 import com.example.currencyswap.domain.models.Currency
 
