@@ -1,5 +1,6 @@
 package com.example.currencyswap.presentation.di
 
+import com.example.currencyswap.presentation.main.ConverterViewModel
 import org.koin.core.context.loadKoinModules
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -12,12 +13,8 @@ object PresentationModule {
 
     private fun viewModelModule(): Module {
 
-        /**
-         * Aqui estamos pegando a dependencia do UseCase
-         * lá do Domain.di.
-         * */
-
         return module {
-            factory { ConvertViewModel(xxx = get()) }
+            factory { ConverterViewModel(convertedCurrencyUseCase = get()) }
         }
+    }
 }
