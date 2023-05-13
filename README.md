@@ -10,12 +10,12 @@ https://apilayer.com/marketplace/exchangerates_data-api
 
 ## 🛠 Funcionalidades do Projeto
 
-`Conversão de Moedas` <br>
+`Conversão de Moedas` 
 
 ## ⚙ Técnicas e Tecnologias Utilizadas
 
 `Kotlin`: linguagem utilizada no projeto. <br>
-`Arquitetura Clean + MvvM`: projeto foi feito totalmente nas duas arquiteturas. <br>
+`Arquitetura Clean + MvvM`: projeto feito totalmente nas duas arquiteturas. <br>
 `Koin`: usado para injeção de dependência. <br>
 `Retrofit`: usado para se comunicar com a API. <br>
 `Courutines`: usado para acessar o banco de dados em uma thread adicional. <br>
