@@ -4,6 +4,8 @@ O app CurrencySwap acessa a Exchange Rates Data API para utilizar a funcionalida
 
 ## 📱 Layout do Projeto
 
+![README - screenshot](https://github.com/eduardobelico/CurrencySwap/assets/116230274/c4dd1a31-bd55-4636-b9d9-c9803a2b8cf0)
+
 ## 🌐 Api utilizada 13/05/2023
 
 https://apilayer.com/marketplace/exchangerates_data-api
@@ -29,3 +31,6 @@ Após baixar o projeto, você pode abrir com o Android Studio. Para isso, na tel
 Open an Existing Project (ou alguma opção similar) Procure o local onde o projeto está e o selecione (Caso o projeto seja baixado via zip, é necessário extraí-lo antes de procurá-lo) Por fim clique em OK O Android Studio deve executar algumas tasks do Gradle para configurar o projeto, aguarde até finalizar. Ao finalizar as tasks, você pode executar o App.
 
 ## 🎬 Showcase do Aplicativo
+
+https://github.com/eduardobelico/CurrencySwap/assets/116230274/c01f20b8-e848-438f-9da2-eab15c5caf91
+
