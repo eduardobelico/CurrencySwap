@@ -6,6 +6,10 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query
 
+/**
+ * Interface que lida com o request de conversão para a API.
+ */
+
 interface CurrencyConverterService {
 
     @GET("convert")

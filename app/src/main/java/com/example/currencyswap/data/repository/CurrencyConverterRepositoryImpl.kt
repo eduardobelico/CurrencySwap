@@ -8,6 +8,10 @@ import com.example.currencyswap.domain.repository.CurrencyConverterRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
+/**
+ * Classe de implementação da interface CurrencyConverterRepository, enviando os dados que a camada do Domain precisa.
+ * Envia o resultado para o Domain, atuando como um mediador entre API e a aplicação.
+ */
 
 class CurrencyConverterRepositoryImpl(
     private val service: CurrencyConverterService

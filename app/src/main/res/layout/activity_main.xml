@@ -7,6 +7,15 @@
     android:paddingHorizontal="32dp"
     tools:context="presentation.main.MainActivity">
 
+    <ImageView
+        android:id="@+id/activity_swapCurrency_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/swap_currency"
+        app:layout_constraintBottom_toTopOf="@+id/activity_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/activity_title"
         android:layout_width="wrap_content"
@@ -42,9 +51,8 @@
         android:layout_width="30dp"
         android:layout_height="16dp"
         android:background="@drawable/ic_arrow"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/activity_valueTextImput"
-        app:layout_constraintEnd_toStartOf="@+id/activity_result"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toEndOf="@+id/activity_valueTextImput"
         app:layout_constraintTop_toTopOf="@+id/activity_valueTextImput" />
 

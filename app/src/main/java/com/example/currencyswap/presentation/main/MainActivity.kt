@@ -12,6 +12,10 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+/**
+ * Observa o comportamento do viewModel, reagindo de acordo com os seus estados.
+ */
+
 class MainActivity : AppCompatActivity() {
 
     private val binding by lazy {
@@ -40,11 +44,13 @@ class MainActivity : AppCompatActivity() {
 
                     when (state) {
                         is ConversionState.Loading -> {
-                            viewModel.showProgressBar()
-                            binding.activityResult.isVisible = false
+                            with(binding) {
+                                activityProgressBar.isVisible = true
+                                activityResult.isVisible = false
+                            }
                         }
                         is ConversionState.Success -> {
-                            viewModel.hideProgressBar()
+                            binding.activityProgressBar.isVisible = false
                             with(binding.activityResult) {
                                 isVisible = true
                                 setTextColor(Color.BLACK)
@@ -52,18 +58,23 @@ class MainActivity : AppCompatActivity() {
                             }
                         }
                         is ConversionState.Error -> {
-                            viewModel.hideProgressBar()
+                            binding.activityProgressBar.isVisible = false
                             with(binding.activityResult) {
                                 isVisible = false
                                 setTextColor(Color.RED)
                                 text = state.errorMessage
                             }
                         }
+                        else -> {}
                     }
                 }
             }
         }
     }
+
+    /**
+     * Função que envia os dados para o ViewModel.
+     * */
 
     private fun viewModelBinding() {
         binding.activityButtonConvert.setOnClickListener {

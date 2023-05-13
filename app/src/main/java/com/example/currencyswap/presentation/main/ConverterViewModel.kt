@@ -10,21 +10,37 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlin.math.round
 
+/**
+ *
+ */
+
 
 class ConverterViewModel(private val convertedCurrencyUseCase: GetConvertedCurrencyUseCase) : ViewModel() {
 
-    private val _conversionState = MutableStateFlow<ConversionState>(ConversionState.Loading)
+    private val _conversionState = MutableStateFlow<ConversionState>(ConversionState.Empty)
     val conversionState: StateFlow<ConversionState> = _conversionState
+
+    /**
+     * Função que faz a conversão a partir da API.
+     * */
 
     fun getConvertedCurrency(
         valor: String?,
         de: String,
         para: String
     ) {
+        /**
+         * Verificação de segurança para garantir que o campo "Amount" sesteja preenchido..
+         * */
+
         if (valor.isNullOrBlank()) {
             _conversionState.value = ConversionState.Error("Insira um valor")
             return
         }
+
+        /**
+         * Modificação do estado da variável para ser observada pela View.
+         */
 
         viewModelScope.launch(IO) {
 
@@ -61,16 +77,5 @@ class ConverterViewModel(private val convertedCurrencyUseCase: GetConvertedCurre
                 }
             }
         }
-    }
-
-    private val _progressBarVisible = MutableStateFlow<Boolean>(false)
-    val progressionBarVisible: StateFlow<Boolean> = _progressBarVisible
-
-    fun showProgressBar() {
-        _progressBarVisible.value = true
-    }
-
-    fun hideProgressBar() {
-        _progressBarVisible.value = false
     }
 }

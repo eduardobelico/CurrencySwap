@@ -16,6 +16,10 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
+/**
+ * Organiza as dependências da camada Data e cria a função para carregar os módulos na classe App.
+ */
+
 object DataModule {
     fun load() {
         loadKoinModules(convertionModule() + networkModule())

@@ -6,6 +6,10 @@ import com.example.currencyswap.domain.repository.CurrencyConverterRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
+/**
+ * Classe que age como ponte entre a camada de Data e o viewModel, utilizando os dados enviados pelo repository
+ * e enviando para o viewModel.
+ */
 
 class GetConvertedCurrencyUseCase(private val repository: CurrencyConverterRepository) {
 
