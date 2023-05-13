@@ -6,7 +6,7 @@ O app CurrencySwap acessa a Exchange Rates Data API para utilizar a funcionalida
 
 ![README - screenshot](https://github.com/eduardobelico/CurrencySwap/assets/116230274/c4dd1a31-bd55-4636-b9d9-c9803a2b8cf0)
 
-## 🌐 Api utilizada 13/05/2023
+## 🌐 Api Utilizada - 13/05/2023
 
 https://apilayer.com/marketplace/exchangerates_data-api
 
